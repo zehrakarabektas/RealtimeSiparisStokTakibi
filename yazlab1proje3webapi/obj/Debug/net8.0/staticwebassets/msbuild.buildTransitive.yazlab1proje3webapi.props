@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\yazlab1proje3webapi.props" />
+</Project>

@@ -1,0 +1,152 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #9B1B30, #6A0DAD);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+    .sidebar.close {
+        width: 88px;
+    }
+
+header {
+    height: 100px;
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    header img {
+        width: 80px;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+.sidebar.close img {
+    width: 30px;
+}
+
+.sidebar .toggle {
+    position: absolute;
+    top: 5%;
+    right: 30px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.menu li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+    .menu li i {
+        min-width: 60px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        color: #fff;
+    }
+
+li span {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+    transition: .3s;
+    color: #ccc;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar .menu {
+    margin-top: 20px;
+}
+
+/*li.search-box {
+    border-radius: 6px;
+    background-color: #3a3b3c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    li.search-box input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: #3a3b3c;
+        color: #ccc;
+        border-radius: 6px;
+        font-size: 17px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }*/
+
+li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    li a:hover {
+        background-color: #fff;
+    }
+
+        li a:hover .icon,
+        li a:hover .text {
+            color: #242526;
+        }
+.main-content {
+    margin-left: 250px; /* Sidebar genişliğinde margin */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Sidebar açıldığında kayma efekti */
+    width: calc(100% - 250px); /* Sidebar genişliğini dikkate alır */
+}
+
+/* Sidebar kapalı olduğunda main content genişliği */
+.sidebar.close + .main-content {
+    margin-left: 88px; /* Sidebar kapalı olduğunda sağa kayar */
+    width: calc(100% - 88px); /* Sidebar kapanınca içerik alanı genişler */
+}

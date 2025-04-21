@@ -1,0 +1,596 @@
+[
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.CustomerController",
+    "Method": "CustomerListesi",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.CustomerController",
+    "Method": "CustomerEkle",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yeniCustomer",
+        "Type": "yazlab1proje3webapi.Dtos.Customer.CreateCustomerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.CustomerController",
+    "Method": "CustomerGuncelle",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guncelCustomer",
+        "Type": "yazlab1proje3webapi.Dtos.Customer.UpdateCustomerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.CustomerController",
+    "Method": "CustomerSil",
+    "RelativePath": "api/Customer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.CustomerController",
+    "Method": "CustomerGoruntuleme",
+    "RelativePath": "api/Customer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.CustomerController",
+    "Method": "UpdateCustomerBudgetAndTotalSpent",
+    "RelativePath": "api/Customer/UpdateBudget",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "budget",
+        "Type": "yazlab1proje3webapi.Dtos.Customer.UpdateBudgetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.LoginController",
+    "Method": "AdminLogin",
+    "RelativePath": "api/Login/AdminLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "yazlab1proje3webapi.Dtos.LoginDtos.AdminLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.LoginController",
+    "Method": "CustomerLogin",
+    "RelativePath": "api/Login/CustomerLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "yazlab1proje3webapi.Dtos.LoginDtos.CustomerLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.LogsController",
+    "Method": "LogListesi",
+    "RelativePath": "api/Logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.LogsController",
+    "Method": "LogEkle",
+    "RelativePath": "api/Logs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yeniLog",
+        "Type": "yazlab1proje3webapi.Dtos.LogDtos.CreateLogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.LogsController",
+    "Method": "LogSil",
+    "RelativePath": "api/Logs",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.LogsController",
+    "Method": "LogGuncelle",
+    "RelativePath": "api/Logs",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "log",
+        "Type": "yazlab1proje3webapi.Dtos.LogDtos.UpdateLogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "OrderListesi",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "OrderEkle",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yeniorder",
+        "Type": "yazlab1proje3webapi.Dtos.OrderDtos.CreateOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "OrderGuncelle",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "yazlab1proje3webapi.Dtos.OrderDtos.UpdateOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "OrderSil",
+    "RelativePath": "api/Orders/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "OrderGoruntuleme",
+    "RelativePath": "api/Orders/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "GetOrdersByCustomerId",
+    "RelativePath": "api/Orders/Customer/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "UpdateOrderStatus",
+    "RelativePath": "api/Orders/DurumGuncelleme/{orderId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "GetOnayliSiparisler",
+    "RelativePath": "api/Orders/OnayliSiparisler",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "SiparisIsleme",
+    "RelativePath": "api/Orders/SiparisIsleme",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.OrdersController",
+    "Method": "UpdateOncelikBeklemeSuresi",
+    "RelativePath": "api/Orders/UpdateOncelikBeklemeSuresi/{orderId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "guncel",
+        "Type": "yazlab1proje3webapi.Dtos.OrderDtos.UpdateOncelikSkorBeklemeSureDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "ProductListesi",
+    "RelativePath": "api/Products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "ProductEkle",
+    "RelativePath": "api/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yeniProduct",
+        "Type": "yazlab1proje3webapi.Dtos.ProductDtos.CreateProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "ProductGuncelle",
+    "RelativePath": "api/Products",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guncelProduct",
+        "Type": "yazlab1proje3webapi.Dtos.ProductDtos.UpdateProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "ProductSil",
+    "RelativePath": "api/Products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "ProductGoruntuleme",
+    "RelativePath": "api/Products/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "GetProductStock",
+    "RelativePath": "api/Products/GetStock/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.ProductsController",
+    "Method": "ProductStockGuncelle",
+    "RelativePath": "api/Products/StockGuncelle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guncelProduct",
+        "Type": "yazlab1proje3webapi.Dtos.ProductDtos.UpdateStockDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.SepetimController",
+    "Method": "GetCartByCustomerId",
+    "RelativePath": "api/Sepetim/GetSepetim/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.SepetimController",
+    "Method": "AddSepetim",
+    "RelativePath": "api/Sepetim/SepeteEkle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "urun",
+        "Type": "yazlab1proje3webapi.Dtos.SepetimDtos.CreateSepetimDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.SepetimController",
+    "Method": "AllDeleteSepetim",
+    "RelativePath": "api/Sepetim/SepetiTemizle",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.SepetimController",
+    "Method": "GetSepetimUrunSay",
+    "RelativePath": "api/Sepetim/SepetUrunSay/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.SepetimController",
+    "Method": "DeleteSepetim",
+    "RelativePath": "api/Sepetim/UrunSil/{sepetimId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sepetimId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.TokenCreateController",
+    "Method": "CreateToken",
+    "RelativePath": "api/TokenCreate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "yazlab1proje3webapi.Tools.GetCheckAppUserViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.VeriController",
+    "Method": "GetCustomerCount",
+    "RelativePath": "api/Veri/CustomerCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.VeriController",
+    "Method": "GetCustomerCountsByCity",
+    "RelativePath": "api/Veri/CustomerCountsByCity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.VeriController",
+    "Method": "GetOrderCount",
+    "RelativePath": "api/Veri/OrderCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.VeriController",
+    "Method": "GetProductCount",
+    "RelativePath": "api/Veri/ProductCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.VeriController",
+    "Method": "GetProductSales",
+    "RelativePath": "api/Veri/ProductSales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "yazlab1proje3webapi.Controllers.VeriController",
+    "Method": "GetRevenueSummary",
+    "RelativePath": "api/Veri/RevenueSummary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

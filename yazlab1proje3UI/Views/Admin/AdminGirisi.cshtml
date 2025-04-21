@@ -1,0 +1,107 @@
+﻿@model yazlab1proje3UI.Dtos.LoginDtos.AdminLoginDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>AdminGirisi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/index.css" />
+    <script src="https://unpkg.com/&#64;lottiefiles/lottie-player@1.7.0/dist/lottie-player.js"></script>
+</head>
+<body>
+    <div class="container  p-4">
+        <div class="row main mt-5">
+
+            <div class="col-md-6 p-5 " id="signUp">
+                <h1 class="display-4 text-center ">Password Reset</h1>
+                <form class="d-flex justify-content-center mt-4">
+                    <div class="w-75 ">
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Admin Adı</label>
+                            <input type="text">
+                        </div>
+                        <button type="submit" style="width:150px;">Şifre Gönder</button>
+                        <div class="d-flex justify-content-between mt-5">
+                            <a class="links" href="#" id="loginLink">Giriş Yap</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-md-6 p-5 " id="login">
+                <h1 class="display-4 text-center ">Login</h1>
+                <form method="post"class="d-flex justify-content-center mt-4">
+                    <div class="w-75 ">
+                        <div class="form-group">
+                            <label for="">Email </label>
+                            <input type="email" asp-for="AdminMail">
+                        </div>
+                        <div class="form-group my-4">
+                            <label for="">Password</label>
+                            <input type="password" asp-for="Password">
+                        </div>
+                        <button type="submit">Giriş Yap</button>
+                        <div class="d-flex justify-content-between mt-5">
+                            <a class="links" href="#" id="registerLink">Şifremi Unuttum</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="overlay">
+                <lottie-player src="https://lottie.host/4171d90d-c268-4483-b041-f543bfa346c4/oFIgpGqpzY.json"
+                               background="transparent" speed="1" loop autoplay>
+                </lottie-player>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        document.querySelectorAll('input').forEach((item) => {
+            item.addEventListener("focus", function () {
+                item.previousElementSibling.className = 'label-selected';
+            })
+            item.addEventListener("blur", function () {
+                console.log(item.value);
+                if (item.value === '') {
+                    item.previousElementSibling.className = '';
+                }
+            })
+        })
+
+        document.getElementById("registerLink").addEventListener("click", function () {
+            if (window.innerWidth < 600) {
+                document.getElementById("signUp").style.display = 'block';
+                document.getElementById("login").style.display = 'none';
+            }
+            else {
+                document.getElementById("overlay").style.transform = 'translate(550px , -25px)';
+            }
+        })
+        document.getElementById("loginLink").addEventListener("click", function () {
+            if (window.innerWidth < 600) {
+                document.getElementById("login").style.display = 'block';
+                document.getElementById("signUp").style.display = 'none';
+            }
+            else {
+                document.getElementById("overlay").style.transform = 'translate(0px , -25px)';
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>

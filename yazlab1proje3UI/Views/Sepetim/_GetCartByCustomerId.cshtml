@@ -1,0 +1,90 @@
+﻿@using yazlab1proje3UI.Dtos.SepetimDtos
+@model List<ResultSepetimDtos>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="list-group list-group-flush">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center mb-3">
+
+                    @if (!string.IsNullOrEmpty(item.ProductImage))
+                    {
+                        <img src="@item.ProductImage" alt="@item.ProductName" class="rounded"
+                             style="width: 60px; height: 60px; object-fit: cover; margin-right: 15px;">
+                    }
+                    else
+                    {
+                        <i class="fas fa-image" style="color: #aaa; width: 60px; height: 60px; font-size: 40px; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; border-radius: 4px; margin-right: 15px;"></i>
+                    }
+
+                    <div class="flex-grow-1">
+                        <div><strong>@item.ProductName</strong></div>
+                        <div class="text-muted" style="font-size: 0.85rem;">Beden: Tek Ebat · Adet: @item.Quantity</div>
+                        <div class="text-danger mt-1" style="font-size: 1rem;">@item.TotalPrice TL</div>
+                    </div>
+                </div>
+
+            </li>
+        }
+    </ul>
+
+    <div class="d-flex justify-content-between">
+        <a href="/Sepetim/GetSepetim" class="btn btn-outline-secondary flex-grow-1 me-2">Sepete Git</a>
+        <a href="/Order/CreateOrder" class="btn btn-primary flex-grow-1">Siparişi Tamamla</a>
+    </div>
+}
+else
+{
+    <div class="p-3 text-center text-muted">
+        <i class="bi bi-cart"></i> Sepetiniz boş.
+    </div>
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+    .cart-dropdown {
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .cart-dropdown img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px;
+            background-color: #f9f9f9;
+        }
+
+        .cart-dropdown h6 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .cart-dropdown .btn {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .cart-dropdown .btn-outline-secondary {
+            border-color: #ccc;
+            color: #555;
+        }
+
+            .cart-dropdown .btn-outline-secondary:hover {
+                background-color: #f0f0f0;
+            }
+
+        .cart-dropdown .btn-primary {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+
+            .cart-dropdown .btn-primary:hover {
+                background-color: #e65c00;
+            }
+</style>

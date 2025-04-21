@@ -1,0 +1,167 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    outline: none; /* Fokusken mavi kenar rengini kaldýrýr */
+    box-shadow: none; /* Box-shadow'u kaldýrýr */
+}
+
+/* Logo konumlandýrma - logoyu biraz içeriye kaydýrma */
+.navbar-brand {
+    padding-left: 20px; /* Logo saða kayar */
+    padding-right: 20px; /* Saðda biraz boþluk býrakýlýr */
+}
+
+/* Arama butonunun renklerini özelleþtirme */
+/* Buton stilleri */
+.btn-outline-success {
+    border-color: #6c757d; /* Butonun kenar rengi */
+    color: #570e6c; /* Buton metin rengi */
+    padding: 0.375rem 0.75rem; /* Buton içeriðini hizalamak için padding */
+}
+
+.btn-outline-success:hover {
+    background-color: #ba0000; /* Butonun hover (üzerine gelindiðinde) arkaplan rengi */
+    color: white; /* Buton metni beyaz olur */
+}
+
+/* Arama çubuðu */
+.input-group input {
+    border-color: #6c757d; /* Arama çubuðunun kenar rengi gri */
+    box-shadow: none; /* Arama çubuðunun focus olduðunda mavi gölgeyi engeller */
+    height: 32px; /* Arama kutusunun yüksekliði */
+    border-right: none; /* Arama kutusu ile buton arasýndaki çizgiyi kaldýrýr */
+    padding: 0.375rem 0.75rem; /* Arama kutusundaki metni hizalamak için padding */
+    flex: 1; /* Arama kutusunun mevcut alaný doldurmasýný saðlar */
+}
+
+.input-group input:focus {
+    border-color: #ba0000; /* Arama çubuðunun focus olduðunda kenar rengi kýrmýzý olur */
+    box-shadow: none; /* Mavi gölgeyi engeller */
+}
+
+/* Butonun hizalanmasý */
+.input-group button {
+    height: 32px; /* Butonun yüksekliði, arama kutusuyla ayný olacak þekilde */
+    border-left: none; /* Arama kutusu ile buton arasýndaki çizgiyi kaldýrýr */
+    padding: 0.375rem 0.75rem; /* Butonun içeriðini hizalamak için padding */
+    color: #570e6c; /* Buton metin rengi */
+    border-color: #6c757d; /* Butonun kenar rengi */
+}
+
+.input-group button:hover {
+    background-color: #ba0000; /* Butonun hover arkaplan rengi */
+    color: white; /* Buton metni beyaz olur */
+}
+
+
+/* Navbar linklerinin varsayýlan rengi */
+.navbar-nav .nav-item .nav-link {
+    color: #ba0000; /* Varsayýlan metin rengi kýrmýzý */
+    font-weight: normal; /* Varsayýlan yazý kalýnlýðý */
+    transition: color 0.2s ease, text-shadow 0.2s ease; /* Yavaþ geçiþ efekti ekledik */
+}
+
+    /* Navbar linkine üzerine gelindiðinde renk deðiþikliði */
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #ba0000; /* Hoverda metin rengi kýrmýzý olur */
+        text-shadow: 0px 0px 2px #ba0000, 0px 0px 5px #ba0000; /* Metin kalýnlýðý efekti */
+    }
+
+    /* Navbar linkine týklandýðýnda renk deðiþikliði ve yazý kalýnlaþmasý */
+    .navbar-nav .nav-item .nav-link:focus,
+    .navbar-nav .nav-item .nav-link:active {
+        color: #ba0000; /* Týklanmýþken metin rengi kýrmýzý olur */
+        background-color: transparent; /* Arka plan þeffaf olur */
+        font-weight: bold; /* Týklanmýþken yazý kalýnlaþýr */
+        transform: scale(1.1); /* Týklanmýþ öðe biraz büyür */
+    }
+
+/* Dropdown menüsündeki butonlarýn görünümü */
+.navbar-nav .nav-item .dropdown-menu .btn-link {
+    color: #ba0000; /* Butonun metin rengi kýrmýzý */
+    text-decoration: none; /* Alt çizgi kaldýrýlýr */
+    background: none; /* Arkaplan rengini kaldýrýr */
+    border: none; /* Kenarlýk kaldýrýlýr */
+}
+
+    /* Dropdown butonuna hover efekti */
+    .navbar-nav .nav-item .dropdown-menu .btn-link:hover {
+        color: white; /* Metin rengi beyaz olur */
+        background-color: #ba0000; /* Arkaplan rengi kýrmýzý olur */
+        font-weight: bold; /* Hoverda yazý kalýnlaþýr */
+    }
+
+    /* Týklanmýþken dropdown butonunun renginin kýrmýzýya dönmesi ve yazý kalýnlaþmasý */
+    .navbar-nav .nav-item .dropdown-menu .btn-link:focus,
+    .navbar-nav .nav-item .dropdown-menu .btn-link:active {
+        color: #ba0000; /* Metin rengi kýrmýzý olur */
+        background-color: transparent; /* Arka plan þeffaf olur */
+        border: none; /* Kenarlarý kaldýrýr */
+        font-weight: bold; /* Týklanmýþken yazý kalýnlaþýr */
+        transform: scale(1.1); /* Týklanmýþ öðe biraz büyür */
+    }
+
+.cart-dropdown {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .cart-dropdown img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 2px;
+        background-color: #f9f9f9;
+    }
+
+    .cart-dropdown h6 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .cart-dropdown .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .cart-dropdown .btn-outline-secondary {
+        border-color: #ccc;
+        color: #555;
+    }
+
+        .cart-dropdown .btn-outline-secondary:hover {
+            background-color: #f0f0f0;
+        }
+
+    .cart-dropdown .btn-primary {
+        background-color: #ff6600;
+        border-color: #ff6600;
+    }
+
+        .cart-dropdown .btn-primary:hover {
+            background-color: #e65c00;
+        }

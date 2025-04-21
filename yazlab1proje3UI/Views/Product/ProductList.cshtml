@@ -1,0 +1,107 @@
+﻿@model List<ResultProductDtos>
+@{
+    ViewData["Title"] = "ProductList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+<h1 class="text-center my-4">Mağazadaki Ürünler</h1>
+<div class="text-start my-4">
+    <a href="/Product/ProductEkle" class="btn btn-edit">
+        <i class="bi bi-plus-circle"></i> Yeni Ürün Ekle
+    </a>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Ürün bulunmamaktadır.
+    </div>
+}
+else
+{
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+        @foreach (var product in Model)
+        {
+            var cardClass = "card h-100 shadow-lg rounded-3 transition-all";
+
+            var stokYuzdesi = (product.Stock * 100) / 100;
+
+            var stockGrafigi = stokYuzdesi == 0 ? "bg-danger" :
+            stokYuzdesi <= 20 ? "bg-warning" :
+            stokYuzdesi <= 50 ? "bg-success" : "bg-success";
+
+            <div class="col">
+                <div class="@cardClass" style="width: 20rem; height: 28rem; margin: 0 auto; transition: transform 0.3s ease-in-out;">
+                   
+                    <div class="image-container" style="height: 200px; width: 200px; margin: 0 auto; overflow: hidden; border-radius: 15px;">
+                        <img src="@Url.Content(!string.IsNullOrEmpty(product.ImagePath) ? $"~{product.ImagePath}" : "~/images/bosgorsel.png")"
+                             class="card-img-top"
+                             alt="@product.ProductName"
+                             style="height: 100%; width: 100%; object-fit: cover;">
+                    </div>
+
+                    <div class="card-body text-center p-3">
+                        <h6 class="card-title mb-1">@product.ProductName</h6>
+                        <p class="card-text small text-muted">
+                            <strong>Stok:</strong> @product.Stock<br />
+                            <strong>Fiyat:</strong> @product.Price.ToString("C2")<br />
+                            @if (product.Stock == 0)
+                            {
+                                <span class="text-danger">Ürün Stoğu Bitti</span>
+                            }
+                            else if (product.Stock <= 10)
+                            {
+                                <span class="text-warning">Ürün Stoğu Bitmek Üzere</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">Ürün Stoğu Yeterli</span>
+                            }
+                        </p>
+
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar @stockGrafigi" role="progressbar" style="width: @stokYuzdesi%" aria-valuenow="@stokYuzdesi" aria-valuemin="0" aria-valuemax="100">
+                                @stokYuzdesi%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer text-center p-3 d-flex justify-content-center">
+                        <a href="/Product/ProductStockGuncelle/@product.ProductID" class="btn btn-sm mx-1 btn-edit">
+                            <i class="bi bi-box-seam"></i> Stok Güncelle
+                        </a>
+                        <a href="/Product/ProductGuncelle/@product.ProductID" class="btn btn-sm mx-1 btn-edit">
+                            <i class="bi bi-pencil"></i> Düzenle
+                        </a>
+                        <a href="/Product/ProductSil/@product.ProductID" class="btn btn-sm mx-1 btn-delete">
+                            <i class="bi bi-trash"></i> Sil
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+}
+<style>
+    .btn-edit {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-edit:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30); 
+        }
+
+    .btn-delete {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-delete:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30); 
+        }
+</style>

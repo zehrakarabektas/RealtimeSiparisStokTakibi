@@ -1,0 +1,417 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\yazlab1proje3UI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\yazlab1proje3UI.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\02d32d84-92f8-4aeb-b3cc-ac98dacd707e.png",
+      "PackagePath": "staticwebassets\\Images\\02d32d84-92f8-4aeb-b3cc-ac98dacd707e.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\0ecb420e-166a-4179-baaf-8f086dfb6ad5.png",
+      "PackagePath": "staticwebassets\\Images\\0ecb420e-166a-4179-baaf-8f086dfb6ad5.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\216501b9-6fe8-4c90-96d7-140750dd5d19.png",
+      "PackagePath": "staticwebassets\\Images\\216501b9-6fe8-4c90-96d7-140750dd5d19.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\2a5a7085-521e-4eac-af43-6033f70b3204.png",
+      "PackagePath": "staticwebassets\\Images\\2a5a7085-521e-4eac-af43-6033f70b3204.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\2bbfc172-d6ff-494e-b051-9025b0bbc945.png",
+      "PackagePath": "staticwebassets\\Images\\2bbfc172-d6ff-494e-b051-9025b0bbc945.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\39fc2feb-389f-4d36-916c-97e25dee4cf2.png",
+      "PackagePath": "staticwebassets\\Images\\39fc2feb-389f-4d36-916c-97e25dee4cf2.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\3adba704-57c8-4adf-b945-c0ffe150a275.png",
+      "PackagePath": "staticwebassets\\Images\\3adba704-57c8-4adf-b945-c0ffe150a275.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\482b3939-cafa-46cc-b112-fc68062b608b.png",
+      "PackagePath": "staticwebassets\\Images\\482b3939-cafa-46cc-b112-fc68062b608b.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\558df73b-049d-4ec8-a026-c16c12d027ab.png",
+      "PackagePath": "staticwebassets\\Images\\558df73b-049d-4ec8-a026-c16c12d027ab.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\59243c74-7bfe-4883-a6ab-9738fd476c11.png",
+      "PackagePath": "staticwebassets\\Images\\59243c74-7bfe-4883-a6ab-9738fd476c11.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\5aaba4c9-b8aa-4b6c-bb83-3ccac649a9ed.png",
+      "PackagePath": "staticwebassets\\Images\\5aaba4c9-b8aa-4b6c-bb83-3ccac649a9ed.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\5cef96c2-61c2-41c7-9a1f-8caeff81e003.png",
+      "PackagePath": "staticwebassets\\Images\\5cef96c2-61c2-41c7-9a1f-8caeff81e003.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\5d7ee13b-3c69-4d84-825f-a1d12313015e.png",
+      "PackagePath": "staticwebassets\\Images\\5d7ee13b-3c69-4d84-825f-a1d12313015e.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\65ca6f49-8df5-4e70-a242-d8d38cf447e1.png",
+      "PackagePath": "staticwebassets\\Images\\65ca6f49-8df5-4e70-a242-d8d38cf447e1.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\6f1a9167-d6a5-49cd-a46e-3377c0a45076.png",
+      "PackagePath": "staticwebassets\\Images\\6f1a9167-d6a5-49cd-a46e-3377c0a45076.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\7e3b66ba-e3db-4436-9f64-115538db51cb.png",
+      "PackagePath": "staticwebassets\\Images\\7e3b66ba-e3db-4436-9f64-115538db51cb.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\8d6f7e92-76b8-4d34-af69-67a77bbd78c9.png",
+      "PackagePath": "staticwebassets\\Images\\8d6f7e92-76b8-4d34-af69-67a77bbd78c9.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\91703966-d2e9-4b60-88d5-c76958f4d475.png",
+      "PackagePath": "staticwebassets\\Images\\91703966-d2e9-4b60-88d5-c76958f4d475.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\9ac383b6-bc5c-491b-920c-bc6baca10fa5.png",
+      "PackagePath": "staticwebassets\\Images\\9ac383b6-bc5c-491b-920c-bc6baca10fa5.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\a9f082db-5b11-4214-a71e-ad13c74b0935.png",
+      "PackagePath": "staticwebassets\\Images\\a9f082db-5b11-4214-a71e-ad13c74b0935.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\ac3a0708-ddf7-4e19-9b61-db9b655814ef.png",
+      "PackagePath": "staticwebassets\\Images\\ac3a0708-ddf7-4e19-9b61-db9b655814ef.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\ae2a4e28-e292-4ef7-8e2b-3774199707cb.png",
+      "PackagePath": "staticwebassets\\Images\\ae2a4e28-e292-4ef7-8e2b-3774199707cb.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\af626676-3a71-44c3-bde5-0063c86d9728.png",
+      "PackagePath": "staticwebassets\\Images\\af626676-3a71-44c3-bde5-0063c86d9728.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\amblem.png",
+      "PackagePath": "staticwebassets\\Images\\amblem.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\ayi.png",
+      "PackagePath": "staticwebassets\\Images\\ayi.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\bosgorsel.png",
+      "PackagePath": "staticwebassets\\Images\\bosgorsel.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\c2ea464d-cf05-4f07-a435-e81dfa130f04.png",
+      "PackagePath": "staticwebassets\\Images\\c2ea464d-cf05-4f07-a435-e81dfa130f04.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\c322241d-af58-426d-a0b6-7c6ee690c12e.png",
+      "PackagePath": "staticwebassets\\Images\\c322241d-af58-426d-a0b6-7c6ee690c12e.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\cea0517f-231c-4d15-b23b-48d9aa02657a.png",
+      "PackagePath": "staticwebassets\\Images\\cea0517f-231c-4d15-b23b-48d9aa02657a.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\e1477fe5-f152-42d2-b290-9768c6346294.png",
+      "PackagePath": "staticwebassets\\Images\\e1477fe5-f152-42d2-b290-9768c6346294.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\e4d59e52-7a2d-40e3-ae47-f5525a4ab51d.png",
+      "PackagePath": "staticwebassets\\Images\\e4d59e52-7a2d-40e3-ae47-f5525a4ab51d.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\eaa43ac9-6627-4d2e-8b5b-5a94734385e7.png",
+      "PackagePath": "staticwebassets\\Images\\eaa43ac9-6627-4d2e-8b5b-5a94734385e7.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\kulaklik.png",
+      "PackagePath": "staticwebassets\\Images\\kulaklik.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\lamba.png",
+      "PackagePath": "staticwebassets\\Images\\lamba.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\Images\\ruj.png",
+      "PackagePath": "staticwebassets\\Images\\ruj.png"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.yazlab1proje3UI.props",
+      "PackagePath": "build\\yazlab1proje3UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.yazlab1proje3UI.props",
+      "PackagePath": "buildMultiTargeting\\yazlab1proje3UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.yazlab1proje3UI.props",
+      "PackagePath": "buildTransitive\\yazlab1proje3UI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.yazlab1proje3UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

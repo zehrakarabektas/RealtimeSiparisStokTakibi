@@ -1,0 +1,177 @@
+﻿@model yazlab1proje3UI.Dtos.LoginDtos.CustomerLoginDto
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>CustomerGirisi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/index.css" />
+    <script src="https://unpkg.com/&#64;lottiefiles/lottie-player@1.7.0/dist/lottie-player.js"></script>
+</head>
+<body>
+   @*  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Yükleniyor...</span>
+        </div>
+    </div> *@
+    <div class="container p-4">
+       
+        <div class="row main mt-5">
+
+            <div class="col-md-6 p-4" id="signUp">
+                <h1 class="display-4 text-center">Sign up</h1>
+                <form method="post" class="d-flex justify-content-center mt-3">
+                    <div class="w-75">
+                        <div class="form-group mb-2">
+                            <label for="">Customer Name</label>
+                            <input type="text" class="form-control custom-input" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Email</label>
+                            <input type="email" id="signUpEmail" class="form-control custom-input" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="">Password</label>
+                            <input type="password" id="signUpPassword" class="form-control custom-input" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Address</label>
+                            <input type="text" class="form-control custom-input" required>
+                        </div>
+                        <button type="submit" id="signUpButton" class="mt-2">Kayıt Ol</button>
+                        <div class="d-flex justify-content-between mt-3">
+                            <a class="links" href="#" id="loginLink">Hesabınız Var Mı?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <div class="col-md-6 p-5" id="login">
+                <h1 class="display-4 text-center">Login</h1>
+                <form method="post"id="loginForm" class="d-flex justify-content-center mt-4">
+                    <div class="w-75">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" asp-for="CustomerMail" required>
+                        </div>
+                        <div class="form-group my-4">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" asp-for="Password" required>
+                        </div>
+                        <button type="submit" id="loginButton">Giriş Yap</button>
+                        <div class="d-flex justify-content-between mt-5">
+                            <a class="links" href="#" id="registerLink">Hesap Oluştur</a>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="overlay">
+                <lottie-player src="https://lottie.host/3e8adddf-669e-47c7-b371-09de191e459c/5HdWbkUWnU.json"
+                               background="transparent" speed="1" loop autoplay>
+                </lottie-player>
+            </div>
+        </div>
+    </div>
+   <style>
+        .custom-input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #ba0000;
+            border-radius: 0;
+            outline: none;
+            color: #000;
+            position: relative;
+            bottom: 0px;
+        }
+
+            .custom-input:focus {
+                outline: none;
+                background-color: transparent;
+                border-bottom: 2px solid darkred;
+                box-shadow: none;
+            }
+           
+
+   </style>
+    <script>
+        
+        document.querySelectorAll('input').forEach((item) => {
+            item.addEventListener("focus", function () {
+                item.previousElementSibling.className = 'label-selected';
+            })
+            item.addEventListener("blur", function () {
+                if (item.value === '') {
+                    item.previousElementSibling.className = '';
+                }
+            })
+        });
+
+        document.getElementById("registerLink").addEventListener("click", function () {
+            if (window.innerWidth < 600) {
+                document.getElementById("signUp").style.display = 'block';
+                document.getElementById("login").style.display = 'none';
+            } else {
+                document.getElementById("overlay").style.transform = 'translate(550px, -25px)';
+            }
+        });
+
+        document.getElementById("loginLink").addEventListener("click", function () {
+            if (window.innerWidth < 600) {
+                document.getElementById("login").style.display = 'block';
+                document.getElementById("signUp").style.display = 'none';
+            } else {
+                document.getElementById("overlay").style.transform = 'translate(0px, -25px)';
+            }
+        });
+
+
+        // document.getElementById('loginForm').addEventListener('submit', async function (e) {
+        //     e.preventDefault();
+
+        //     const email = document.getElementById('email').value;
+        //     const password = document.getElementById('password').value;
+
+        //     try {
+        //         const response = await fetch('/Customer/CustomerGirisi', {
+        //             method: 'POST',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //             },
+        //             body: JSON.stringify({
+        //                 KullaniciEmail: email,
+        //                 Password: password
+        //             }),
+        //         });
+
+        //         // Yanıtı JSON olarak al
+        //         const result = await response.json();
+
+        //         if (response.ok) {
+        //             sessionStorage.setItem('token', result.token);
+        //             sessionStorage.setItem('role', result.role);
+        //             alert('Başarıyla giriş yapıldı!');
+        //             window.location.href = '/Customer/CustomerAnaSayfa';
+        //         } else {
+        //             alert(result.message || 'Giriş başarısız!');
+        //         }
+        //     } catch (error) {
+        //         console.error('Hata:', error);
+        //         alert('Sunucu hatası oluştu!');
+        //     }
+        // });
+
+              
+
+    </script>
+
+</body>
+</html>

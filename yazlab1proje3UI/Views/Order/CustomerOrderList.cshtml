@@ -1,0 +1,220 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using static yazlab1proje3UI.Dtos.OrderDtos.ResultOrderWithCustomerDto
+@model List<ResultOrderWithCustomerDto>
+@{
+    ViewData["Title"] = "CustomerOrderList";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Siparişlerim</h1>
+
+    @foreach (var order in Model)
+    {
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center">
+                       @*  <img src="@(!string.IsNullOrEmpty(order.ImagePath) ? order.ImagePath : "/images/bos.png")"
+                             alt="Ürün Görseli"
+                             class="img-fluid rounded shadow-sm"> *@
+                        @if (!string.IsNullOrEmpty(order.ImagePath))
+                        {
+                            <img src="@order.ImagePath"
+                                 alt="Ürün Görseli"
+                                 class="img-fluid rounded shadow-sm">
+                        }
+                        else
+                        {
+                            <i class="bi bi-box-seam fs-1 text-muted"></i>
+                        }
+                    </div>
+                    <div class="col-md-6">
+                        @if (!string.IsNullOrEmpty(order.ProductName))
+                        {
+                            <h4 class="mb-2 text-primary">@order.ProductName</h4>
+                        }
+                        else
+                        {
+                            <h4 class="mb-2 text-danger">Ürün mağazadan kaldırılmış</h4>
+                        }
+                       @*  <h4 class="mb-2 text-primary">@order.ProductName</h4> *@
+                        <p><strong>Adet:</strong> @order.Quantity</p>
+                        <p><strong>Tutar:</strong> @order.TotalPrice.ToString("C")</p>
+                        <p><strong>Tarih:</strong> @order.OrderDate.ToString("dd MMMM yyyy HH:mm:ss")</p>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        @if (order.OrderStatus == OrderStatusType.OnayBeklemede)
+                        {
+                            <span class="badge badge-outline-warning"><i class="fas fa-hourglass-half"></i> Onay Bekliyor</span>
+                        }
+                        else if (order.OrderStatus == OrderStatusType.Isleniyor)
+                        {
+                            <span class="badge badge-outline-primary"><i class="fas fa-spinner fa-spin"></i> İşlem Gerçekleştiriliyor</span>
+                        }
+                        else if (order.OrderStatus == OrderStatusType.Tamamlandi)
+                        {
+                            <span class="badge badge-outline-success"><i class="fas fa-check-circle"></i> Tamamlandı</span>
+                        }
+                        else if (order.OrderStatus == OrderStatusType.IptalEdildi)
+                        {
+                            <span class="badge badge-outline-danger"><i class="fas fa-times-circle"></i> İptal Edildi</span>
+                        }
+                        else if (order.OrderStatus == OrderStatusType.Beklemede)
+                        {
+                            <span class="badge badge-outline-secondary"><i class="fas fa-pause"></i> Beklemede</span>
+                        }
+                        else if (order.OrderStatus == OrderStatusType.HataAlindi)
+                        {
+                            <span class="badge badge-outline-dark"><i class="fas fa-exclamation-circle"></i> Zaman Aşım Hatası Alındı</span>
+                        }
+                        else if (order.OrderStatus == OrderStatusType.ButceYetersizligi)
+                        {
+                            <span class="badge badge-outline-dark"><i class="fas fa-exclamation-circle"></i> Bütçe Yetersiz</span>
+                        }
+                        else
+                        {
+                        <span class="badge badge-outline-light"><i class="fas fa-question-circle"></i> Bilinmiyor</span>
+                        }
+                    </div>
+                    @if(order.OrderStatus == OrderStatusType.Tamamlandi||order.OrderStatus == OrderStatusType.OnayBeklemede)
+                    {
+                        <div class="mt-2 text-end">
+                            <a href="/Order/CustomerOrderIptali/@order.OrderID" class="btn btn-sm mx-1 btn-danger">
+                               <i class="bi bi-trash"></i> Siparişi İptal Et
+                            </a>
+                        </div>
+
+                    }
+                   
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+    
+    .card {
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease-in-out;
+        background-color: #f8f9fa;
+    }
+
+        .card:hover {
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.03);
+        }
+
+    
+    .img-fluid {
+        max-width: 150px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+
+    .badge {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.75rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+
+    .badge-outline-warning {
+        color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .badge-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .badge-outline-success {
+        color: #28a745;
+        border-color: #28a745;
+    }
+
+    .badge-outline-danger {
+        color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .badge-outline-secondary {
+        color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .badge-outline-dark {
+        color: #343a40;
+        border-color: #343a40;
+    }
+
+    .badge-outline-light {
+        color: #f8f9fa;
+        border-color: #f8f9fa;
+    }
+
+ 
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        padding: 0.2em 0.5em;
+        font-size: 0.8rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .btn-danger:hover {
+            background-color: #bd2130;
+        }
+
+
+    .col-md-3 {
+        text-align: right;
+    }
+
+    .btn-danger.mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .btn-success {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-success:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .btn-primary {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .btn[disabled] {
+        background-color: #d6d6d6 !important;
+        color: #a1a1a1 !important;
+        cursor: not-allowed;
+    }
+
+    .text-primary {
+        background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+</style>

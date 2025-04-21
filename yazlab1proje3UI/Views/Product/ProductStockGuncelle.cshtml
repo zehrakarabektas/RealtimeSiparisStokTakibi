@@ -1,0 +1,110 @@
+﻿@model UpdateProductDtos
+@{
+    ViewData["Title"] = "ProductStockGuncelle";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h1 class="text-center my-4">Ürün Stok Güncelle</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="ProductName">Ürün ID:</label>
+                    <input type="text" asp-for="ProductID" class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label for="ProductName">Ürün Adı:</label>
+                    <input type="text" asp-for="ProductName" class="form-control" disabled />
+                </div>
+
+                <div class="form-group">
+                    <label for="Price">Fiyat:</label>
+                    <input type="number" asp-for="Price" class="form-control" step="0.01" disabled />
+                </div>
+
+                <div class="form-group">
+                    <label for="Stock">Stok Miktarı:</label>
+                    <input type="number" asp-for="Stock" class="form-control" placeholder="Stok miktarını giriniz" />
+                </div>
+                <div class="form-group text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-box-open"></i> Ürünün Stoğunu Güncelle
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="image-preview text-center" style="position: relative; border: 1px solid #ccc; padding: 20px; min-height: 400px; background-color: #f9f9f9; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                <h4>Ürün Görseli</h4>
+
+                <img id="imagePreview" src="#" alt="Yüklenen görsel" class="img-fluid" style="display: none; max-height: 400px; width: auto; border-radius: 10px;" />
+                @if (!string.IsNullOrEmpty(Model.ImagePath))
+                {
+                    <img src="@Url.Content(!string.IsNullOrEmpty(Model.ImagePath) ? $"~{Model.ImagePath}" : "~/images/bosgorsel.png")" alt="Ürün Görseli" class="img-fluid mt-2" style="max-height: 300px; border-radius: 10px;" />
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function showImagePreview(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('imagePreview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+<style>
+    .form-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 12px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        padding: 12px 20px;
+        transition: background 0.3s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .image-preview {
+        border-radius: 8px;
+        padding: 20px;
+        border: 2px dashed #007bff;
+        background-color: #f9f9f9;
+    }
+
+        .image-preview img {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    .text-danger {
+        color: #e74c3c;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>

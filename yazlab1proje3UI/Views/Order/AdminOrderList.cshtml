@@ -1,0 +1,374 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using static yazlab1proje3UI.Dtos.OrderDtos.ResultOrderDtos
+@{
+    ViewData["Title"] = "AdminOrderList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h1 class="text-center my-4">Müşteri Siparişleri</h1>
+
+<div class="d-flex align-items-center mb-3">
+    <select id="status" class="form-select form-select-sm" style="width: 200px; font-size: 0.85rem;">
+        <option value="">Tüm Siparişler</option>
+        @foreach (OrderStatusType status in Enum.GetValues(typeof(OrderStatusType)))
+        {
+            var statusName = status.GetType()
+            .GetMember(status.ToString())
+            .FirstOrDefault()
+            ?.GetCustomAttributes(typeof(DisplayAttribute), false)
+            .Cast<DisplayAttribute>()
+            .FirstOrDefault()?.Name ?? status.ToString();
+
+            <option value="@status">@statusName Siparişler</option>
+        }
+    </select>
+
+    <button id="onayButonu" class="btn btn-success btn-sm ms-2">
+        <i class="fas fa-check-circle"></i> Tümünü Onayla
+    </button>
+
+
+</div>
+<div class="container mt-4">
+    <h3>İşleme Durumundaki Siparişler</h3>
+    <table class="table table-striped" id="processingOrdersTable">
+        <thead>
+            <tr>
+                <th>Sipariş ID</th>
+                <th>Premiumluk Durumu</th>
+                <th>Müşteri Adı</th>
+                <th>Ürün Görseli</th>
+                <th>Ürün Adı</th>
+                <th>Miktar</th>
+                <th>Toplam Fiyat</th>
+                <th>Öncelik Skoru</th>
+                <th>Sipariş Durumu</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+    <div class="container mt-4">
+        <table class="table table-striped" id="ordersTable">
+            <thead>
+                <tr>
+                    <th>Sipariş ID</th>
+                    <th>Müşteri Adı</th>
+                    <th>Ürün Görseli</th>
+                    <th>Ürün Adı</th>
+                    <th>Miktar</th>
+                    <th>Toplam Fiyat</th>
+                    <th>Sipariş Tarihi</th>
+                    <th>Bekleme Süresi </th>
+                    <th>Öncelik Skoru</th>
+                    <th>Sipariş Durumu</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+         document.getElementById('status').addEventListener('change', function () {
+        var selectedStatus = this.value;
+        var rows = document.querySelectorAll('.order-row');
+
+        rows.forEach(function (row) {
+            var orderStatus = row.getAttribute('data-status');
+
+            if (selectedStatus === '' || selectedStatus === orderStatus) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+        const API_URL = "/Order/AdminOrderListVeri";
+
+        function fetchOrders() {
+            fetch(API_URL, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            credentials: "include"
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Siparişler yüklenirken hata oluştu");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                     populateProcessingOrdersTable(data);
+                     populateOrdersTable(data);
+                })
+                .catch(error => {
+                    console.error("Hata:", error);
+                });
+        }
+       function populateProcessingOrdersTable(orders) {
+    const tableBody = document.querySelector("#processingOrdersTable tbody");
+    tableBody.innerHTML = "";
+
+    const processingOrders = orders.filter((order) => order.orderStatus === 1);
+
+    processingOrders.forEach((order) => {
+        const isPremium = order.customerType === "Premium"; 
+        const productName = order.productName || '<span class="text-danger">Mağazadan Kaldırılan Ürün</span>';
+        const imagePath = order.imagePath || "/images/icon-placeholder.png"; 
+
+        const row = document.createElement("tr");
+            row.innerHTML = `
+            <td>${order.orderID}</td>
+            <td>${isPremium
+                    ? '<span class="text-warning" title="Premium Müşteri"><i class="bi bi-star-fill"></i> Premium</span>'
+                    : '<span class="text-muted">Standart</span>'
+                }</td>
+            <td>${order.customerName}</td>
+            <td>
+                <img src="${imagePath}" alt="Ürün Görseli" class="product-image" style="width: 50px; height: 50px; object-fit: cover;">
+            </td>
+            <td>${productName}</td>
+            <td>${order.quantity}</td>
+            <td>${order.totalPrice.toLocaleString("tr-TR", {
+                    style: "currency",
+                    currency: "TRY",
+                })}</td>
+            <td>${order.oncelikSkoru}</td>
+            <td>${getOrderStatusBadge(order.orderStatus)}</td>
+        `;
+            tableBody.appendChild(row);
+        });
+}
+        function populateOrdersTable(orders) {
+    const tableBody = document.querySelector("#ordersTable tbody");
+    tableBody.innerHTML = ""; 
+
+    orders.forEach(order => {
+        const isPremium = order.customerType === "Premium"; 
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td> ${order.orderID}</td>
+            <td>${isPremium ? '<span class="text-warning" title="Premium Müşteri"><i class="bi bi-star-fill"></i></span>' : ''}${order.customerName} </td>
+            <td>
+                <img src="${order.imagePath || '/images/default.png'}" alt="Ürün Görseli" class="product-image">
+            </td>
+            <td>${order.productName}</td>
+            <td>${order.quantity}</td>
+            <td>${order.totalPrice.toLocaleString("tr-TR", { style: "currency", currency: "TRY" })}</td>
+            <td>${new Date(order.orderDate).toLocaleDateString()}</td>
+            <td>${formatBeklemeSuresi(order.beklemeSuresi)}</td>
+            <td>${order.oncelikSkoru}</td>
+            <td>${getOrderStatusBadge(order.orderStatus)}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+        // function populateOrdersTable(orders) {
+        //     const tableBody = document.querySelector("#ordersTable tbody");
+        //     tableBody.innerHTML = ""; 
+
+        //     orders.forEach(order => {
+           
+        //         const row = document.createElement("tr");
+        //     row.innerHTML = `
+        //                 <td>${order.orderID}</td>
+        //                 <td>${order.customerName}</td>
+        //                 <td>
+        //                     <img src="${order.imagePath || '/images/default.png'}" alt="Ürün Görseli" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+        //                 </td>
+        //                 <td>${order.productName}</td>
+        //                 <td>${order.quantity}</td>
+        //                 <td>${order.totalPrice.toLocaleString("tr-TR", { style: "currency", currency: "TRY" })}</td>
+        //                 <td>${new Date(order.orderDate).toLocaleDateString()}</td>
+        //                <td>${formatBeklemeSuresi(order.beklemeSuresi)}</td>
+        //                 <td>${order.oncelikSkoru}
+        //                 <td>${getOrderStatusBadge(order.orderStatus)}</td>
+                       
+        //             `;
+        //         tableBody.appendChild(row);
+        //     });
+        // }
+        function formatBeklemeSuresi(seconds) {
+            const saat = Math.floor(seconds / 3600);
+           const dakika = Math.floor((seconds % 3600) / 60);
+           const saniye = Math.floor(seconds % 60); 
+           return `${saat.toString().padStart(2, '0')} saat ${dakika.toString().padStart(2, '0')} dk ${saniye.toString()} sn`;
+       }
+        function getOrderStatusBadge(status) {
+        switch (status) {
+            case 0: // OnayBeklemede
+                return '<span class="badge badge-outline-warning"><i class="fas fa-hourglass-half"></i> Onay Bekliyor</span>';
+            case 1: // Isleniyor
+                return '<span class="badge badge-outline-primary"><i class="fas fa-spinner fa-spin"></i> İşlem Gerçekleştiriliyor</span>';
+            case 2: // Tamamlandi
+                return '<span class="badge badge-outline-success"><i class="fas fa-check-circle"></i> Tamamlandı</span>';
+            case 3: // IptalEdildi
+                return '<span class="badge badge-outline-danger"><i class="fas fa-times-circle"></i> İptal Edildi</span>';
+            case 4: // Beklemede
+                return '<span class="badge badge-outline-secondary"><i class="fas fa-pause"></i> Beklemede</span>';
+            case 5: // HataAlindi
+                return '<span class="badge badge-outline-dark"><i class="fas fa-exclamation-circle"></i> Zaman Aşım Hatası Alındı</span>';
+            case 6: // ButceYetersizligi
+                return '<span class="badge badge-outline-dark"><i class="fas fa-exclamation-circle"></i> Bütçe Yetersizlik Hatası</span>';
+            default:
+                return '<span class="badge badge-outline-light"><i class="fas fa-question-circle"></i> Bilinmiyor</span>';
+        }
+        }
+    document.getElementById("onayButonu").addEventListener("click", function () {
+        allOrderOnayla();
+    });
+    function allOrderOnayla() {
+        fetch(`/Order/AdminOrderOnaylama`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "include"
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Tüm siparişler onaylanırken bir hata oluştu.");
+                }
+                return response.text();
+            })
+            .then(message => {
+                fetchOrders(); 
+                
+            })
+            .catch(error => {
+                console.error("Hata:", error);
+            });
+   }
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchOrders();
+            setInterval(fetchOrders, 1000); 
+        });
+
+    </script>
+
+
+<style>
+    table.table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1rem;
+    }
+
+        table.table th,
+        table.table td {
+            padding: 16px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table.table th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        table.table tbody tr {
+            height: 80px;
+        }
+
+            table.table tbody tr:hover {
+                background-color: #f1f1f1;
+                transition: background-color 0.3s ease;
+            }
+
+    .btn-success {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-success:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .product-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+
+    .badge {
+        font-size: 0.95rem;
+        padding: 8px 15px;
+        border-radius: 15px;
+        text-transform: capitalize;
+    }
+
+    .badge-outline-warning {
+        color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .badge-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .badge-outline-success {
+        color: #28a745;
+        border-color: #28a745;
+    }
+
+    .badge-outline-danger {
+        color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .badge-outline-secondary {
+        color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .badge-outline-dark {
+        color: #343a40;
+        border-color: #343a40;
+    }
+
+    .badge-outline-light {
+        color: #f8f9fa;
+        border-color: #f8f9fa;
+    }
+
+    table.table tbody tr:nth-child(odd) {
+        background-color: #fafafa;
+    }
+
+    table.table-bordered {
+        border: 1px solid #ddd;
+    }
+
+        table.table-bordered th,
+        table.table-bordered td {
+            border: 1px solid #ddd;
+        }
+
+    #status {
+        margin-right: 10px;
+    }
+
+    .btn-sm {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+</style>

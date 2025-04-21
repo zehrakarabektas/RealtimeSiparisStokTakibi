@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewData["Title"] = "LogPaneli";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header text-white" style="background-color: #9B1B30;">
+            Log Paneli
+        </div>
+        
+        <div class="card-body">
+            <table id="logsTable" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                       @*  <th>Log ID</th>
+                        <th>Müşteri ID</th>
+                        <th>Sipariş ID</th>*@
+                        <th>Tarih</th> 
+                        <th>Tür</th>
+                        <th>Detay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const LOG_API_URL = "/Log/LogPaneliVeri"; 
+
+    function fetchLogs() {
+        fetch(LOG_API_URL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "include"
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Loglar yüklenirken hata oluştu");
+                }
+                return response.json();
+            })
+            .then(data => {
+                populateLogsTable(data);
+            })
+            .catch(error => {
+                console.error("Hata:", error);
+            });
+    }
+
+    function populateLogsTable(logs) {
+        const tableBody = document.querySelector("#logsTable tbody");
+        tableBody.innerHTML = ""; 
+
+        logs.forEach(log => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                     <td>
+      ${new Date(log.logDate).toLocaleString('tr-TR', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                fractionalSecondDigits: 3
+            })}
+    </td>
+
+                    <td>${getLogIcon(log.logType)} ${log.logType}</td>
+                    <td>${log.logDetails}</td>
+                `;
+            tableBody.appendChild(row);
+        });
+    }
+    setInterval(fetchLogs, 1000);
+
+    document.addEventListener("DOMContentLoaded", fetchLogs);
+    function getLogIcon(logType) {
+        switch (logType) {
+            case "Uyarı":
+                return `<i class="fa-solid fa-exclamation-triangle text-warning" title="Uyarı"></i>`;
+            case "Bilgilendirme":
+                return `<i class="fa-solid fa-info-circle text-info" title="Bilgilendirme"></i>`;
+            case "Hata":
+                return `<i class="fa-solid fa-times-circle text-danger" title="Hata"></i>`;
+            case "Başarılı":
+                return `<i class="fa-solid fa-check-circle text-success" title="Başarılı"></i>`;
+            default:
+                return `<i class="fa-solid fa-circle text-muted" title="Bilinmeyen"></i>`;
+        }
+    }
+</script>
+@* 
+<td>${log.logID}</td>
+<td>${log.customerID}</td>
+<td>${log.orderID}</td>
+<td>${new Date(log.logDate).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "medium" })}</td> *@

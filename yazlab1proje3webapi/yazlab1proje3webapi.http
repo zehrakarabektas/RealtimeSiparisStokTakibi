@@ -1,0 +1,6 @@
+@yazlab1proje3webapi_HostAddress = http://localhost:5046
+
+GET {{yazlab1proje3webapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

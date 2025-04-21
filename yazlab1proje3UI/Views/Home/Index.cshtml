@@ -1,0 +1,185 @@
+﻿@model List<yazlab1proje3UI.Dtos.ProductDtos.ResultProductDtos>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center my-4">Mağazadaki Ürünler</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Mağazada hiçbir ürün bulunmamaktadır.
+    </div>
+}
+else
+{
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+        @foreach (var product in Model)
+        {
+            var cardClass = "card h-100 shadow-lg rounded-3 transition-all";
+            <div class="col">
+                <div class="@cardClass" style="width: 18rem; margin: 0 auto; transition: transform 0.3s ease-in-out;">
+                    
+                    <div class="image-container" style="height: 200px; width: 200px; margin: 0 auto; overflow: hidden; border-radius: 15px;">
+                        <img src="@Url.Content(!string.IsNullOrEmpty(product.ImagePath) ? $"~{product.ImagePath}" : "~/images/bosgorsel.png")"
+                             class="card-img-top"
+                             alt="@product.ProductName"
+                             style="height: 100%; width: 100%; object-fit: cover;">
+                    </div>
+
+                    <div class="card-body text-center p-3">
+                        <h6 class="card-title mb-1">@product.ProductName</h6>
+                        <p class="card-text small text-muted">
+                            <strong>Fiyat:</strong> @product.Price.ToString("C2")<br />
+                            @if (product.Stock == 0)
+                            {
+                                <span class="text-danger">Bu ürünün stokları bitti!</span>
+                            }
+                            else if (product.Stock <= 10)
+                            {
+                                <span class="text-warning">Stoklar tükenmek üzere, acele edin!</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">Ürün stokta mevcut.</span>
+                            }
+                        </p>
+
+
+                    </div>
+
+                    <div class="card-footer text-center p-3">
+                        <div class="d-flex justify-content-center align-items-center" style=" margin-bottom: 10px;">
+                            <button class="btn btn-sm btn-outline-secondary" id="increase_@product.ProductID" onclick="updateQuantity('@product.ProductID', 1)" @(product.Stock == 0 ? "disabled" : "")>+</button>
+                            <input type="text" id="quantity_@product.ProductID" value="1" class="mx-2" style="width: 140px; text-align: center;" readonly>
+                            <button class="btn btn-sm btn-outline-secondary" id="decrease_@product.ProductID" onclick="updateQuantity('@product.ProductID', -1)" @(product.Stock == 0 ? "disabled" : "")>-</button>
+                        </div>
+                        <label for="quantity_@product.ProductID" class="small text-muted"></label>
+
+                        <button class="btn btn-sm mx-1 btn-success"
+                        @(product.Stock == 0 ? "disabled" : "") onclick="addToCart(@product.ProductID)">
+                            <i class="bi bi-cart-plus"></i> Sepete Ekle
+                        </button>
+                        <button class="btn btn-sm mx-1 btn-success"
+                        @(product.Stock == 0 ? "disabled" : "") onclick="addToCart(@product.ProductID)">
+                            <i class="bi bi-cart"></i> Şipariş Ver
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+}
+<style>
+    .btn-success {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-success:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .btn-primary {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .btn[disabled] {
+        background-color: #d6d6d6 !important;
+        color: #a1a1a1 !important;
+        cursor: not-allowed;
+    }
+
+    .d-flex {
+        align-items: center;
+    }
+
+        .d-flex button {
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .quantity {
+        font-size: 1.5rem; 
+        color: #333;
+        font-weight: 600;
+        width: 60px;
+        text-align: center;
+        border: 1px solid #9B1B30;
+        background-color: #fff;
+    }
+
+    .btn-outline-secondary {
+        border-color: #9B1B30;
+        color: #9B1B30;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #9B1B30;
+            color: white;
+        }
+
+        .btn-outline-secondary .bi {
+            color: #9B1B30;
+        }
+
+        .btn-outline-secondary:hover .bi {
+            color: white;
+        }
+
+    .small.text-muted {
+        font-size: 0.9rem;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function updateQuantity(productId, change) {
+    
+        const quantityInput = document.getElementById('quantity_' + productId);
+        let currentQuantity = parseInt(quantityInput.value);
+
+        currentQuantity += change;
+
+        const stock = 5; 
+        if (currentQuantity < 1) {
+            currentQuantity = 1; 
+        } else if (currentQuantity > stock) {
+            currentQuantity = stock;  
+        }
+
+        quantityInput.value = currentQuantity;
+    }
+    function loadCart() {
+        $.ajax({
+            url: '/Cart/GetCart',  
+            type: 'GET',
+            success: function (data) {
+                $('#cartDropdownMenu').html(data);
+            },
+            error: function () {
+                alert('Sepet yüklenemedi!');
+            }
+        });
+    }
+
+    $('#cartDropdown').on('click', function () {
+        loadCart();
+    });
+
+</script>

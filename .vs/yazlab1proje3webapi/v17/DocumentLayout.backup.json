@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|solutionrelative:yazlab1proje3ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4201899A-2C0C-448A-B77A-7A52AE8F0782}|yazlab1proje3webapi\\yazlab1proje3webapi.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4201899A-2C0C-448A-B77A-7A52AE8F0782}|yazlab1proje3webapi\\yazlab1proje3webapi.csproj|solutionrelative:yazlab1proje3webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3ui\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|solutionrelative:yazlab1proje3ui\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3ui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|solutionrelative:yazlab1proje3ui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4201899A-2C0C-448A-B77A-7A52AE8F0782}|yazlab1proje3webapi\\yazlab1proje3webapi.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4201899A-2C0C-448A-B77A-7A52AE8F0782}|yazlab1proje3webapi\\yazlab1proje3webapi.csproj|solutionrelative:yazlab1proje3webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4201899A-2C0C-448A-B77A-7A52AE8F0782}|yazlab1proje3webapi\\yazlab1proje3webapi.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\repositories\\orderrepositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4201899A-2C0C-448A-B77A-7A52AE8F0782}|yazlab1proje3webapi\\yazlab1proje3webapi.csproj|solutionrelative:yazlab1proje3webapi\\repositories\\orderrepositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|c:\\users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AC0D3099-0221-4A76-AEEA-24E8A828036B}|yazlab1proje3UI\\yazlab1proje3UI.csproj|solutionrelative:yazlab1proje3ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 153,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "yazlab1proje3UI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "yazlab1proje3UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T09:51:42.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "yazlab1proje3webapi\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "yazlab1proje3webapi\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAIBAAAAAAAAAAArwBEBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T17:55:18.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "yazlab1proje3UI\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "yazlab1proje3UI\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAvwJIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T07:16:26.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "yazlab1proje3UI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "yazlab1proje3UI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAArwMIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:20:51.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "yazlab1proje3webapi\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "yazlab1proje3webapi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAnwGwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T17:42:31.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "yazlab1proje3UI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3UI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "yazlab1proje3UI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAAwLgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T19:38:29.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\Repositories\\OrderRepositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "yazlab1proje3webapi\\Repositories\\OrderRepositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\zehra\\source\\repos\\yazlab1proje3webapi\\yazlab1proje3webapi\\Repositories\\OrderRepositories\\OrderRepository.cs",
+              "RelativeToolTip": "yazlab1proje3webapi\\Repositories\\OrderRepositories\\OrderRepository.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAmwGUAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T09:33:31.061Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1142,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

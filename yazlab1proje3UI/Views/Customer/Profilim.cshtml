@@ -1,0 +1,111 @@
+﻿@model ResultCustomerDtos
+@{
+    ViewData["Title"] = "Profilim";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+
+     
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Profilim</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group position-relative">
+                    <label for="CustomerName" class="form-label">Ad Soyad</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input asp-for="CustomerName" class="form-control" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group position-relative">
+                    <label for="CustomerEmail" class="form-label">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input asp-for="CustomerEmail" class="form-control" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group position-relative">
+                    <label for="Adress" class="form-label">Adres</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        <input asp-for="Adress" class="form-control" rows="3" readonly></>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group position-relative">
+                    <label for="Budget" class="form-label">Bütçe</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-wallet"></i></span>
+                        <input asp-for="Budget" class="form-control" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group position-relative">
+                    <label for="CustomerType" class="form-label">Müşteri Türü</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                        <input asp-for="CustomerType" class="form-control" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group position-relative">
+                    <label for="TotalSpent" class="form-label">Toplam Harcama</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                        <input asp-for="TotalSpent" class="form-control" readonly />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<style>
+    .form-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 12px;
+    }
+
+    .input-group-text {
+        background-color: #f8f9fa;
+        border-radius: 8px 0 0 8px;
+        border: 1px solid #ccc;
+    }
+
+    .btn-primary {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        padding: 12px 20px;
+        transition: background 0.3s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .text-danger {
+        color: #e74c3c;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />

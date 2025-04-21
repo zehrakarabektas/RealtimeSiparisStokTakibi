@@ -1,0 +1,89 @@
+﻿@using Newtonsoft.Json
+
+@{
+    ViewData["Title"] = "AdminAnaSayfa";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container text-center my-5">
+    <div class="counts d-flex justify-content-center align-items-center">
+        <div class="count mx-4">
+            <i class="fas fa-users fa-4x"></i>
+            <h3 class=" mt-3" style="font-size: 1.8rem;">Customer Count</h3>
+            <p  style="font-size: 1.5rem;">@ViewBag.CustomerCount</p>
+        </div>
+        <div class="count mx-4">
+            <i class="fas fa-box fa-4x "></i>
+            <h3 class="mt-3" style="font-size: 1.8rem;">Product Count</h3>
+            <p  style="font-size: 1.5rem;">@ViewBag.ProductCount</p>
+        </div>
+        <div class="count mx-4">
+            <i class="fas fa-shopping-cart fa-4x "></i>
+            <h3 class=" mt-3" style="font-size: 1.8rem;">Order Count</h3>
+            <p  style="font-size: 1.5rem;">@ViewBag.OrderCount</p>
+        </div>
+    </div>
+</div>
+
+    <style>
+       .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.counts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.count {
+    background: linear-gradient(135deg, #9B1B30, #6A0DAD); 
+    border: 1px solid #f5c6cb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    color: white 
+}
+
+.count:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #6A0DAD, #9B1B30); 
+}
+
+.count i {
+    font-size: 4rem; 
+    color: white
+}
+
+.count h3 {
+    font-size: 1.8rem; 
+    margin-top: 1rem;
+    color: white 
+}
+
+.count p {
+    font-size: 1.5rem;
+    color: white 
+}
+    </style>
+</body>
+</html>
+
+

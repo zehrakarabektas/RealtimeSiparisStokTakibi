@@ -1,0 +1,194 @@
+﻿ @using yazlab1proje3UI.Dtos.SepetimDtos
+@model List<ResultSepetimDtos>
+
+@{
+    ViewData["Title"] = "GetSepetim";
+    Layout = "~/Views/Shared/_CustomerLayout.cshtml";
+}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Sepetim</h1>
+
+    <table class="table table-borderless align-middle">
+        <thead>
+            <tr class="border-bottom">
+                <th>Ürün Görseli</th>
+                <th>Ürün Adı</th>
+                <th class="text-center">Adet</th>
+                <th>Toplam</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+            @foreach (var item in Model)
+            {
+                <tr class="border-bottom" data-id="@item.Id">
+                    <td>
+                        <div class="img-container">
+                            <img src="@(!string.IsNullOrEmpty(item.ProductImage) ? item.ProductImage : "/images/bos.png")" alt="@item.ProductName">
+                        </div>
+                    </td>
+                    <td>
+                        <span class="product-name">@item.ProductName</span>
+                    </td>
+                    <td class="text-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span id="quantity-@item.Id" class="border px-3 py-1">@item.Quantity</span>
+                        </div>
+                    </td>
+                    <td id="total-@item.Id">@item.TotalPrice.ToString("C")</td>
+                    
+                    <td>
+                        <form action="/Sepetim/DeleteSepetim" method="POST" style="display:inline;">
+                            <input type="hidden" name="sepetimId" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash"></i> Sil
+                            </button>
+                        </form>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @using (Html.BeginForm("CreateOrder", "Order", FormMethod.Post))
+    {
+        <div class="text-end mt-3">
+            <button type="submit" class="btn btn-primary flex-grow-1">Sipariş Tamamla</button>
+        </div>
+    }
+
+
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+   
+    .btn-success {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-success:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .btn-primary {
+        background: linear-gradient(to right, #9B1B30, #6A0DAD);
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #6A0DAD, #9B1B30);
+        }
+
+    .btn[disabled] {
+        background-color: #d6d6d6 !important;
+        color: #a1a1a1 !important;
+        cursor: not-allowed;
+    }
+
+    .btn-outline-secondary {
+        border-color: #9B1B30;
+        color: #9B1B30;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #9B1B30;
+            color: white;
+        }
+
+        .btn-outline-secondary .bi {
+            color: #9B1B30;
+        }
+
+        .btn-outline-secondary:hover .bi {
+            color: white;
+        }
+    .container {
+        max-width: 800px;
+        margin: auto; 
+    }
+
+    .table {
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    .table-borderless th {
+        font-weight: bold;
+        text-align: left;
+        border-bottom: 2px solid #000;
+        padding: 6px 4px;
+        font-size: 0.95rem;
+    }
+
+    .table-borderless td {
+        vertical-align: middle;
+        padding: 10px 8px; 
+        line-height: 1.2; 
+        font-size: 0.9rem; 
+    }
+
+    .img-container {
+        width: 80px; 
+        height: 80px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f8f8;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .product-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+   
+</style>
+
+<script>
+       
+
+    function updateQuantity(itemId, change) {
+        const quantityElement = document.getElementById(`quantity-${itemId}`);
+        const totalElement = document.getElementById(`total-${itemId}`);
+        const currentQuantity = parseInt(quantityElement.innerText);
+
+        if (currentQuantity + change > 0) {
+            fetch(`/Cart/UpdateQuantity`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id: itemId, change: change }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                quantityElement.innerText = data.newQuantity;
+                totalElement.innerText = data.newTotalPrice;
+            })
+            .catch(error => {
+                console.error('Hata:', error);
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+            });
+        } else {
+            alert('Adet en az 1 olmalıdır.');
+        }
+    }
+   
+   
+</script>
